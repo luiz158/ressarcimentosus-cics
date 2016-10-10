@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>br.com.sulamerica.susis</groupId>
+		<artifactId>ressarcimentosus-cics</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>ressarcimentosus-cics-integration</artifactId>
+
+	<name>ressarcimentosus-cics-integration</name>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ibm.connector2</groupId>
+			<artifactId>cicsframe</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ibm.connector2</groupId>
+			<artifactId>ccf2</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ibm.connector2</groupId>
+			<artifactId>cicseci</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ibm.connector2</groupId>
+			<artifactId>ctgclient</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ibm.connector2</groupId>
+			<artifactId>ctgserver</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ibm.connector2</groupId>
+			<artifactId>cicsecitools</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.resource</groupId>
+			<artifactId>connector-api</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.ffpojo</groupId>
+			<artifactId>ffpojo</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jca</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-dao</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-j2ee-connector_1.5_spec</artifactId>
+		</dependency>
+
+	</dependencies>
+</project>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.com.sulamerica.susis</groupId>
+	<artifactId>ressarcimentosus-cics</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+	<name>ressarcimentosus-cics</name>
+	<modules>
+		<module>ressarcimentosus-cics-ear</module>
+		<module>ressarcimentosus-cics-services</module>
+		<module>ressarcimentosus-cics-dao</module>
+		<module>ressarcimentosus-cics-beans</module>
+		<module>ressarcimentosus-cics-web</module>
+		<module>ressarcimentosus-cics-integration</module>
+	</modules>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<spring.version>3.2.14.RELEASE</spring.version>
+		<atomikos.version>3.9.1</atomikos.version>
+		<geronimo.version>2.0.0</geronimo.version>
+		<spring.jca.version>2.0.8</spring.jca.version>
+		<spring.dao.version>2.0.8</spring.dao.version>
+		<ffpojo.version>1.0</ffpojo.version>
+		<connector.api.version>1.5</connector.api.version>
+		<jackson.annotation.version>2.5.1</jackson.annotation.version>
+		<jackson.databind.version>2.5.1</jackson.databind.version>
+		<jackson.core.version>2.5.1</jackson.core.version>
+		<oracle.version>6</oracle.version>
+		<log4j.version>1.2.17</log4j.version>
+		<commons.lang.version>2.6</commons.lang.version>
+		<cics.version>7.2</cics.version>
+		<ressarcimentosus-cics-integration>1.0.0</ressarcimentosus-cics-integration>
+		<ressarcimentosus-cics-dao>1.0.0</ressarcimentosus-cics-dao>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<version>${spring.version}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aop</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jdbc</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context-support</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-beans</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-tx</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-core</artifactId>
+				<version>${jackson.core.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-annotations</artifactId>
+				<version>${jackson.annotation.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>${jackson.databind.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.oracle</groupId>
+				<artifactId>ojdbc</artifactId>
+				<version>${oracle.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-lang</groupId>
+				<artifactId>commons-lang</artifactId>
+				<version>${commons.lang.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.ibm.connector2</groupId>
+				<artifactId>ctgserver</artifactId>
+				<version>${cics.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.ibm.connector2</groupId>
+				<artifactId>ctgclient</artifactId>
+				<version>${cics.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.ibm.connector2</groupId>
+				<artifactId>cicsframe</artifactId>
+				<version>${cics.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.ibm.connector2</groupId>
+				<artifactId>cicseci</artifactId>
+				<version>${cics.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>com.ibm.connector2</groupId>
+				<artifactId>ccf2</artifactId>
+				<version>${cics.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>com.ibm.connector2</groupId>
+				<artifactId>cicsecitools</artifactId>
+				<version>${cics.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.resource</groupId>
+				<artifactId>connector-api</artifactId>
+				<version>${connector.api.version}</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.ffpojo</groupId>
+				<artifactId>ffpojo</artifactId>
+				<version>${ffpojo.version}</version>
+			</dependency>
+
+			<!-- Dependencias do Spring -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jca</artifactId>
+				<version>${spring.jca.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.springframework</groupId>
+						<artifactId>*</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-dao</artifactId>
+				<version>${spring.dao.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.geronimo.specs</groupId>
+				<artifactId>geronimo-j2ee-connector_1.5_spec</artifactId>
+				<version>${geronimo.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>br.com.sulamerica.susis</groupId>
+				<artifactId>ressarcimentosus-cics-dao</artifactId>
+				<version>${ressarcimentosus-cics-dao}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>br.com.sulamerica.susis</groupId>
+				<artifactId>ressarcimentosus-cics-integration</artifactId>
+				<version>${ressarcimentosus-cics-integration}</version>
+			</dependency>
+
+
+		</dependencies>
+
+	</dependencyManagement>
+
+</project>
